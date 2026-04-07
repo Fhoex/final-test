@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install -g firebase-tools'
+               	sh 'npm config set prefix "$WORKSPACE/.npm-global"'
+		sh 'export PATH="$WORKSPACE/.npm-global/bin:$PATH" && npm install -g firebase-tools'
             }
         }
 
