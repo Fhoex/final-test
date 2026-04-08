@@ -15,19 +15,19 @@ pipeline {
 
         stage('Testing Deploy') {
             steps {
-                sh 'firebase deploy --only hosting --project final-testing --token=$FIREBASE_TOKEN'
+                sh 'firebase deploy --only hosting --project final-testing-758ad --token=$FIREBASE_TOKEN'
             }
         }
 
         stage('Staging Deploy') {
             steps {
-                sh 'firebase deploy --only hosting --project final-staging --token=$FIREBASE_TOKEN'
+                sh 'firebase deploy --only hosting --project final-staging-53d0f --token=$FIREBASE_TOKEN'
             }
         }
 
         stage('Production Deploy') {
             steps {
-                sh 'firebase deploy --only hosting --project final-production --token=$FIREBASE_TOKEN'
+                sh 'firebase deploy --only hosting --project final-production-eb79a --token=$FIREBASE_TOKEN'
             }
         }
     }
